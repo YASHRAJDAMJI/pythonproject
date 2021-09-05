@@ -1,2 +1,0 @@
-# pythonproject
-for python project
