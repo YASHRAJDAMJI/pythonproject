@@ -22,20 +22,20 @@ def database():
             
 
             try:
-                mycon=MySQLdb.connect(host="localhost",user="root",passwd="",database="products")
+                mycon=MySQLdb.connect(host="localhost",user="root",passwd="",database="pregi")
                 
-                pname=(input("\n Enter Product name :- "))
-                pid=(input("\n Enter product id :- "))
-                pprice=(input("\n Enter Price of product :- "))
+                regno=(input("\n Enter Product name :- "))
+                pname=(input("\n Enter product id :- "))
+                page=(input("\n Enter Price of product :- "))
                 
                 #INSERT INTO table-name (column-names) VALUES (values) ;
-                query="""INSERT INTO productinfo (id,P_name,Price) VALUES ('{}', '{}', '{}');""".format(pid,pname,pprice)
+                query="""INSERT INTO productinfo (regno,pname,page) VALUES ('{}', '{}', '{}');""".format(regno,pname,page)
                 cur=mycon.cursor()
                 #vals=(pname,pid,pprice)
                 cur.execute(query)
                 mycon.commit()
                 cur.close()
-                
+                #INSERT INTO productinfo (regno,P_name,dob,page,gender,pno,email,address) VALUES (1234,"abcd","25/02/89",89,"mail",1234567890,"abcd@gmail.com","solapur");
                 
                 database()
                 break

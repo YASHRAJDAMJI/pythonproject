@@ -1,6 +1,11 @@
+Title :-
+        Write a program to generate console base invoice
+
+
 To Run Our projact you need to install some dependancies 
 Dependancies to be installed are 
         - MySQLdb (pip install mysql-client)
+	- python 3
 
 our project imports MySQLdb package 
  To run our project client requires to create "products" database and in that database he must create "productinfo" table 
